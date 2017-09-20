@@ -1,14 +1,16 @@
 /******************************************\
 |**********      VARIABLES       **********|
 \******************************************/
+
+/* Need to replace before production for IE */
 :root {
       /* Colors */
       --grey: rgb(18,12,12);
       --primary: rgb();
       --secondary: rgb();
       /* Fonts */
-      --font--main: 'Open Sans';
-      --font--secondary: 'Papyrus';
+      --font--main: 'Open Sans', sans-serif;
+      --font--secondary: 'Roboto';
       /* Social Media Fills */
       --twitter: rgb(0, 182, 241);
       --linkedin: rgb(0, 123, 182) ;
@@ -33,17 +35,22 @@ a { text-decoration: none }
 body { color: var(--grey); font-size: 1.4rem; font-family: var(--font--main) }
 body { background-color: var(--grey) }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
+h1, .h1, h2, .h2, h3, .h3, 
+h4, .h4, h5, .h5, h6, .h6 {
   font-family: var(--font--secondary)
+}
+
+h6, .h6 {
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 .hidden { display: none }
 .strong, .bold, .b { font-weight: bold }
 .en, .thin, .i { font-weight: lighter }
+
+/* Lists */
+.list--plain { list-style: none; }
 
 /* Display definiteions */
 .tablet--only,
@@ -57,19 +64,32 @@ h5, .h5 {
 /******************************************\
 |**********  WRAPPERS/ALIGNMENT  **********|
 \******************************************/
+
 .bg {
   width: 100%;
-  background-color: #fff;
+  background-color: #f8f8f8;
 }
-.inner {
-  padding: 0 2rem;
-}
+
+.inner { padding: 0 2rem; }
+
 
 /******************************************\
 |**********     GRID SPECIFC     **********|
 \******************************************/
 
-.grid__wrapper { display: grid; }
+.grid__wrapper { 
+  display: grid;
+  grid-template-columns: repeat(1, calc(100%));
+}
+
+.grid__item {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+  background: #fff;
+}
 
 
 
@@ -77,15 +97,28 @@ h5, .h5 {
 |**********     PAGE STYLES      **********|
 \******************************************/
 
+.inner--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header {
   height: 10rem;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   color: rgba(255,255,255,0.6);
   background-color: var(--grey);
 }
+
+.header__logo-svg { 
+  fill: #fff;
+  height: 3rem;
+}
+
+.main-nav { display: none; }
 
 main {
 
@@ -96,7 +129,7 @@ section {
 }
 
 footer {
-  olor: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.6);
   background-color: var(--grey);
 }
 
@@ -113,7 +146,47 @@ footer {
  }
 
 
+@media only screen and (min-width: 600px) {
+  
+  .grid__wrapper { grid-template-columns: repeat(2, calc(50%)); }
+  .grid__item    { margin: 1rem; }
+  
+}
 
+
+ @media only screen and (min-width: 768px) {
+
+  .main-nav__mobile-toggle { display: none; }
+
+  .main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .main-nav__item {
+    padding: 0.5rem;
+    transition: background 0.15s ease-in-out;
+  }
+  
+  .main-nav__item:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  .main-nav__item:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+  
+  .grid__item {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+
+ }
+
+@media only screen and (min-width: 600px) and (max-width: 979px) {
+  .grid__item:nth-child(2n-1)  { margin-left:  0; }
+  .grid__item:nth-child(2n)    { margin-right: 0; }
+}
 
 @media only screen and (min-width: 980px) {
   /******************************************\
@@ -123,12 +196,41 @@ footer {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .grid__wrapper { grid-template-columns: repeat(3, calc(100% / 3)); }
+  .grid__item    { padding: 2rem; }
+
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1419px) {
+  .grid__item:nth-child(3n-2)  { margin-left:  0; }
+  .grid__item:nth-child(3n)    { margin-right: 0; }
+ }
+
+@media only screen and (min-width: 1420px) {
+  /******************************************\
+  |**********  WRAPPERS/ALIGNMENT  **********|
+  \******************************************/
+  .inner {
+    max-width: 1400px;
     padding: 0;
   }
+
+  .grid__wrapper { grid-template-columns: repeat(4, calc(25%)); }
+
+  .grid__item {
+    margin: 2rem;
+    padding: 3rem;
+  }
+
+  .grid__item:nth-child(4n-3)  { margin-left:  0; }
+  .grid__item:nth-child(4n)    { margin-right: 0; }
 
 }
 
 
-
 /* Optional font import */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');

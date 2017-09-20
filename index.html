@@ -8,29 +8,55 @@
 
   <link rel="stylesheet" href="/assets/css/main.css">
 
-  <title>Grid System | PINT Inc.</title>
+  <title>Grid Layout | PINT Inc.</title>
 </head>
 <body>
 
 
   <header>
-      <div class="inner">
+      <div class="inner inner--header">
+
           <div class="logo__wrapper">
-            
+              <svg class="header__logo-svg" viewBox="0 0 346.73 90.8">
+                <title>PINT's logo</title>
+                <g>
+                  <path d="M55.48,57.67H34.92L29.17,90.8H0L15.95,0H63.67C85.78,0,98.18,7.9,98.18,23.59,98.18,44.86,84.52,57.67,55.48,57.67ZM52.76,42.55c10.9,0,15.39-6,15.39-13.25,0-5.57-3.4-8.31-11.56-8.31H41.43L37.64,42.55Z"></path>
+                  <path d="M96.13,90.8,112.06,0h29.18L125.29,90.8Z"></path>
+                  <path d="M178.06,39l-9,51.79H141.93l16-90.8h28.86l27.7,52,9.15-52h27.11L234.8,90.8H206Z"></path>
+                  <path d="M314.16,21.25,302,90.8h-29.2L285,21.25H256.19L260,0h86.72l-3.8,21.25Z"></path>
+                </g>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pint-logo"></use>
+              </svg>
           </div>
+
+          <div class="main-nav__mobile-toggle">
+              <svg class="nav-toggler--icon" width="50px" height="42px" viewBox="0 0 50 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g transform="translate(-245.000000, -19.000000)">
+                    <g id="navigation" transform="translate(20.000000, 0.000000)">
+                        <g id="menu" transform="translate(235.000000, 27.000000)">
+                            <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect>
+                            <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect>
+                            <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </div>
+
           <nav class="main-nav__wrapper">
-            <ul class="main-nav">
+            <ul class="main-nav list--plain">
               <li class="main-nav__item">
-                <a href="">About</a>
+                <a href="#">About</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Contact</a>
               </li>
               <li class="main-nav__item link--external">
-                <a href="//www.google.com" target="_blank" rel="noopener">Investors</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="/contact">Contact</a>
+                <a href="//lmgtfy.com/?q=other" target="_blank" rel="noopener">Other</a>
               </li>
             </ul>
           </nav>
+
       </div>
   </header>
 
@@ -38,8 +64,102 @@
   <main>
     <div class="bg">
       <div class="inner">
+
         <h1>Suh dude</h1>
         <p>Hey dude, suh!</p>
+
+        <div class="grid__wrapper">
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item grid__item--small">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item grid__item--small">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item grid__item--small">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item grid__item--small">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+          <div class="grid__item">
+            <div class="grid__item__inner">
+              <h6>Category</h6>
+              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
+              <a href="#" class="grid__item__cta">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </main>
@@ -47,22 +167,32 @@
 
   <footer>
       <div class="inner">
+
         <nav class="footer-nav__wrapper">
           <ul class="footer-nav">
-            <li class="footer-nav__item"><a href="#">About</a></li>
-            <li class="footer-nav__item"><a href="#">Investors</a></li>
-            <li class="footer-nav__item"><a href="#">Contact</a></li>
+
+            <li class="footer-nav__item">
+              <a href="#">About</a>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="#">Contact</a>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="//lmgtfy.com/?q=other" target="_blank" rel="noopener" 
+                 class="footer-nav__item--external">Other</a>
+            </li>
+
           </ul>
         </nav>
+
         <div class="footer--secondary">
-          <ul class="footer-nav--secondary">
-            <li class="footer-nav--seondar__item">
-              <a href="#">Terms &amp; Conditions</a>
-            </li>
-            <li class="footer-nav--seondar__item">
-              <a href="#">Legal</a>
-            </li>
-          </ul>
+          <a href="#">Terms &amp; Conditions</a>
+          <span class="color--primary"> / </span>
+          <a href="#">Legal</a>
+          <!-- The following provides a dynamically generated date 
+               with a static fallback -->
           <span class="copyright">&copy; 
             <script>document.write(new Date().getFullYear());</script>
             <noscript>2017</noscript>
