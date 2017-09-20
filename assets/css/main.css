@@ -1,0 +1,134 @@
+/******************************************\
+|**********      VARIABLES       **********|
+\******************************************/
+:root {
+      /* Colors */
+      --grey: rgb(18,12,12);
+      --primary: rgb();
+      --secondary: rgb();
+      /* Fonts */
+      --font--main: 'Open Sans';
+      --font--secondary: 'Papyrus';
+      /* Social Media Fills */
+      --twitter: rgb(0, 182, 241);
+      --linkedin: rgb(0, 123, 182) ;
+      --facebook: rgb(59, 89, 152);
+  }
+
+
+/******************************************\
+|**********         RESET        **********|
+\******************************************/
+
+*, *:after, *:before { box-sizing: border-box }
+html { font-size: 10px }
+html, body { margin: 0; padding: 0; overflow-x: hidden }
+a { text-decoration: none }
+
+
+/******************************************\
+|**********    COMMON STYLES     **********|
+\******************************************/
+
+body { color: var(--grey); font-size: 1.4rem; font-family: var(--font--main) }
+body { background-color: var(--grey) }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  font-family: var(--font--secondary)
+}
+
+.hidden { display: none }
+.strong, .bold, .b { font-weight: bold }
+.en, .thin, .i { font-weight: lighter }
+
+/* Display definiteions */
+.tablet--only,
+.tablet-desktop--only,
+.desktop--only,
+.desktop-lrg--only {
+  display: none;
+}
+
+
+/******************************************\
+|**********  WRAPPERS/ALIGNMENT  **********|
+\******************************************/
+.bg {
+  width: 100%;
+  background-color: #fff;
+}
+.inner {
+  padding: 0 2rem;
+}
+
+/******************************************\
+|**********     GRID SPECIFC     **********|
+\******************************************/
+
+.grid__wrapper { display: grid; }
+
+
+
+/******************************************\
+|**********     PAGE STYLES      **********|
+\******************************************/
+
+header {
+  height: 10rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgba(255,255,255,0.6);
+  background-color: var(--grey);
+}
+
+main {
+
+}
+
+section {
+
+}
+
+footer {
+  olor: rgba(255,255,255,0.6);
+  background-color: var(--grey);
+}
+
+
+
+/* Nav */
+ .main-nav__item,
+ .main-nav__item a,
+ .footer-nav__item,
+ .footer-nav__item a,
+ .footer-nav--secondary,
+ .footer-nav--secondary a {
+   color: #fff;
+ }
+
+
+
+
+@media only screen and (min-width: 980px) {
+  /******************************************\
+  |**********  WRAPPERS/ALIGNMENT  **********|
+  \******************************************/
+  .inner {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+}
+
+
+
+/* Optional font import */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
