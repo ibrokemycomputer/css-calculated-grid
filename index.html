@@ -29,16 +29,12 @@
               </svg>
           </div>
 
-          <div class="main-nav__mobile-toggle">
-              <svg class="nav-toggler--icon" width="50px" height="42px" viewBox="0 0 50 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g transform="translate(-245.000000, -19.000000)">
-                    <g id="navigation" transform="translate(20.000000, 0.000000)">
-                        <g id="menu" transform="translate(235.000000, 27.000000)">
-                            <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect>
-                            <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect>
-                            <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect>
-                        </g>
-                    </g>
+          <div class="mobile-toggle">
+              <svg class="mobile-toggle__icon" width="30" height="24" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g>
+                  <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect>
+                  <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect>
+                  <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect>
                 </g>
             </svg>
           </div>
@@ -63,7 +59,7 @@
 
   <main>
     <div class="bg">
-      <div class="inner">
+      <div class="inner inner--main">
 
         <h1>Suh dude</h1>
         <p>Hey dude, suh!</p>
@@ -166,10 +162,10 @@
 
 
   <footer>
-      <div class="inner">
+      <div class="inner inner--footer">
 
         <nav class="footer-nav__wrapper">
-          <ul class="footer-nav">
+          <ul class="footer-nav list--plain">
 
             <li class="footer-nav__item">
               <a href="#">About</a>
@@ -190,7 +186,7 @@
         <div class="footer--secondary">
           <a href="#">Terms &amp; Conditions</a>
           <span class="color--primary"> / </span>
-          <a href="#">Legal</a>
+          <a href="#">Legal</a><br class="mobile-only">
           <!-- The following provides a dynamically generated date 
                with a static fallback -->
           <span class="copyright">&copy; 
