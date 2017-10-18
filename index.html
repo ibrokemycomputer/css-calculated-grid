@@ -1,202 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="/assets/css/main.css">
-
-  <title>Grid Layout | PINT Inc.</title>
-</head>
-<body>
-
-
-  <header>
-      <div class="inner inner--header">
-
-          <div class="logo__wrapper">
-              <svg class="header__logo-svg" viewBox="0 0 346.73 90.8">
-                <title>PINT's logo</title>
-                <g>
-                  <path d="M55.48,57.67H34.92L29.17,90.8H0L15.95,0H63.67C85.78,0,98.18,7.9,98.18,23.59,98.18,44.86,84.52,57.67,55.48,57.67ZM52.76,42.55c10.9,0,15.39-6,15.39-13.25,0-5.57-3.4-8.31-11.56-8.31H41.43L37.64,42.55Z"></path>
-                  <path d="M96.13,90.8,112.06,0h29.18L125.29,90.8Z"></path>
-                  <path d="M178.06,39l-9,51.79H141.93l16-90.8h28.86l27.7,52,9.15-52h27.11L234.8,90.8H206Z"></path>
-                  <path d="M314.16,21.25,302,90.8h-29.2L285,21.25H256.19L260,0h86.72l-3.8,21.25Z"></path>
-                </g>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pint-logo"></use>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>Grid Layout | PINT Inc.</title>
+  </head>
+  <body>
+    
+    <header>
+        <div class="header inner inner--header">
+            <div class="logo__wrapper">
+                <svg width="100" class="header__logo-svg" viewBox="0 0 346.73 90.8"><title>PINT's logo</title><g><path d="M55.48,57.67H34.92L29.17,90.8H0L15.95,0H63.67C85.78,0,98.18,7.9,98.18,23.59,98.18,44.86,84.52,57.67,55.48,57.67ZM52.76,42.55c10.9,0,15.39-6,15.39-13.25,0-5.57-3.4-8.31-11.56-8.31H41.43L37.64,42.55Z"></path><path d="M96.13,90.8,112.06,0h29.18L125.29,90.8Z"></path><path d="M178.06,39l-9,51.79H141.93l16-90.8h28.86l27.7,52,9.15-52h27.11L234.8,90.8H206Z"></path><path d="M314.16,21.25,302,90.8h-29.2L285,21.25H256.19L260,0h86.72l-3.8,21.25Z"></path></g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pint-logo"></use></svg>
+            </div>
+            <div class="mobile-toggle">
+                <svg class="mobile-toggle__icon" width="30" height="24" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g>
+                    <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect>
+                    <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect>
+                    <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect>
+                  </g>
               </svg>
-          </div>
+            </div>
 
-          <div class="mobile-toggle">
-              <svg class="mobile-toggle__icon" width="30" height="24" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g>
-                  <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect>
-                  <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect>
-                  <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect>
-                </g>
-            </svg>
-          </div>
+            <nav class="main-nav__wrapper">
+              <ul class="main-nav list--plain">
+                <li class="main-nav__item">
+                  <a href="#">About</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#">Contact</a>
+                </li>
+                <li class="main-nav__item link--external">
+                  <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener">Other</a>
+                </li>
+              </ul>
+            </nav>
 
-          <nav class="main-nav__wrapper">
-            <ul class="main-nav list--plain">
-              <li class="main-nav__item">
+        </div>
+    </header>
+
+    <main>
+      <div class="bg">
+        <div class="inner inner--main">
+          <h1>CSS Grid System</h1>
+          <p>Example grid system using <code>display: grid</code></p>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="grid__item__inner">
+                <p>Fanny pack beard succulents freegan. Put a bird on it chambray locavore, chicharrones taiyaki vice hashtag pickled. Cardigan ennui cloud bread pok pok. Offal mlkshk mumblecore man braid tattooed. Pork belly umami lyft vice, bicycle rights copper mug tacos. Edison bulb franzen fanny pack literally tumeric meditation 3 wolf moon try-hard. Taxidermy 3 wolf moon vape, everyday carry pok pok celiac vegan helvetica. Seitan roof party adaptogen, hammock semiotics stumptown ethical banh mi farm-to-table literally. Roof party lo-fi yr messenger bag cred vexillologist. Roof party single-origin coffee vinyl truffaut direct trade sriracha affogato taxidermy tumeric cornhole enamel pin. Echo park plaid salvia shaman taxidermy, bicycle rights synth VHS actually typewriter venmo. Asymmetrical craft beer paleo you probably haven't heard of them farm-to-table heirloom photo booth. Dreamcatcher aesthetic polaroid taxidermy cornhole food truck. Organic tumblr la croix, before they sold out mlkshk helvetica taxidermy pickled put a bird on it tumeric photo booth scenester pug.</p>
+                <p>Artisan single-origin coffee hammock poke irony. Before they sold out shabby chic godard disrupt tofu quinoa four dollar toast keffiyeh bicycle rights paleo. Austin leggings shaman actually forage whatever pork belly pinterest 3 wolf moon banjo post-ironic mixtape cray. Forage lumbersexual ramps vice neutra iPhone lyft direct trade trust fund. Fanny pack cliche vexillologist forage poke tumeric. Occupy meggings vinyl PBR&B cardigan. Swag fixie intelligentsia kale chips. Jean shorts copper mug fixie, four dollar toast wayfarers messenger bag thundercats cronut photo booth affogato hammock. Kinfolk selvage vape, skateboard celiac air plant ennui flexitarian. Godard taxidermy lyft wolf, cloud bread 90's mumblecore ennui mlkshk. Trust fund vice yr craft beer, before they sold out venmo jean shorts echo park. Church-key seitan pug gochujang, crucifix cray normcore. Brooklyn polaroid pop-up, jianbing taxidermy farm-to-table prism pitchfork kinfolk.</p>
+                <p>Church-key helvetica affogato coloring book blog green juice retro 8-bit. Shabby chic vice butcher, fingerstache marfa vexillologist 8-bit freegan flannel ugh. Poke man bun narwhal 8-bit, master cleanse stumptown organic pok pok trust fund mixtape godard banjo hexagon pour-over cronut. Narwhal ennui church-key, yuccie helvetica swag tattooed glossier direct trade jianbing. Tilde jean shorts drinking vinegar vape twee health goth farm-to-table microdosing fixie pork belly biodiesel. Kale chips adaptogen 3 wolf moon echo park cronut bespoke kogi intelligentsia farm-to-table cornhole deep v asymmetrical sustainable gluten-free edison bulb. Unicorn YOLO locavore meh try-hard taiyaki pug blue bottle letterpress ramps. Sartorial taiyaki readymade, try-hard art party microdosing sriracha whatever. Helvetica la croix taxidermy, hella taiyaki keytar lyft chia shabby chic williamsburg microdosing whatever farm-to-table fanny pack. Live-edge gochujang YOLO tumblr portland dreamcatcher kombucha vaporware tousled pabst kinfolk. Godard taiyaki scenester twee, live-edge jianbing lumbersexual. PBR&B sustainable meh unicorn fam master cleanse.</p>
+                <p>Oh. You need a little dummy text for your mockup? How quaint.</p>
+                <p>I bet you’re still using Bootstrap too…</p>
+                <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <div class="inner inner--footer">
+
+          <nav class="footer-nav__wrapper">
+            <ul class="footer-nav list--plain">
+              <li class="footer-nav__item">
                 <a href="#">About</a>
               </li>
-              <li class="main-nav__item">
+              <li class="footer-nav__item">
                 <a href="#">Contact</a>
               </li>
-              <li class="main-nav__item link--external">
-                <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener">Other</a>
+              <li class="footer-nav__item">
+                <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener" 
+                  class="footer-nav__item--external">Other</a>
               </li>
             </ul>
           </nav>
 
-      </div>
-  </header>
-
-
-  <main>
-    <div class="bg">
-      <div class="inner inner--main">
-
-        <h1>CSS Grid System</h1>
-        <p>Example grid system using <code>display: grid</code></p>
-
-        <div class="grid__wrapper">
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
+          <div class="footer--secondary">
+            <a href="#">Terms &amp; Conditions</a>
+            <span class="color--primary"> / </span>
+            <a href="#">Legal</a><br class="mobile-only">
+            <!-- The following provides a dynamically generated date 
+                with a static fallback -->
+            <span class="copyright">&copy; 
+              <script>document.write(new Date().getFullYear());</script>
+              <noscript>2017</noscript>
+              PINT Inc.</span>
           </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item grid__item--small">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item grid__item--small">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item grid__item--small">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item grid__item--small">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
-          <div class="grid__item">
-            <div class="grid__item__inner">
-              <h6>Category</h6>
-              <p>Paleo food truck viral pitchfork vape pickled blog tote bag kombucha forage selfies kickstarter fingerstache umami pabst. Typewriter cloud bread chambray snackwave quinoa raclette, hexagon vaporware church-key crucifix migas health goth. </p>
-              <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a>
-            </div>
-          </div>
-
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </main>
+  <script src="assets/js/main.js"></script>
 
-
-  <footer>
-      <div class="inner inner--footer">
-
-        <nav class="footer-nav__wrapper">
-          <ul class="footer-nav list--plain">
-
-            <li class="footer-nav__item">
-              <a href="#">About</a>
-            </li>
-
-            <li class="footer-nav__item">
-              <a href="#">Contact</a>
-            </li>
-
-            <li class="footer-nav__item">
-              <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener" 
-                 class="footer-nav__item--external">Other</a>
-            </li>
-
-          </ul>
-        </nav>
-
-        <div class="footer--secondary">
-          <a href="#">Terms &amp; Conditions</a>
-          <span class="color--primary"> / </span>
-          <a href="#">Legal</a><br class="mobile-only">
-          <!-- The following provides a dynamically generated date 
-               with a static fallback -->
-          <span class="copyright">&copy; 
-            <script>document.write(new Date().getFullYear());</script>
-            <noscript>2017</noscript>
-            PINT Inc.</span>
-        </div>
-      </div>
-  </footer>
-
-<script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>
