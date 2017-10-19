@@ -7,53 +7,76 @@
  */
 :root {
   /* Colors */
-  --grey: rgb(18,12,12);
+  --grey: hsl(0, 20%, 6%);
+  --blue: hsl(199, 45%, 54%);
   /* Fonts */
   --font--main: 'Open Sans', sans-serif;
   --font-size--body: 1.4rem;
   /* Sizing */
   --spacing: 1.5rem;
-  --inner: calc(100% - 20px);
-  --grid-item-height: 24rem;
+  --inner: 90vw; /* Not set to 100% due to calc() issues */
+  /* Grid */
+  --columns: 1;
+  --subgrid-items: 1fr;
+  /* 
+   * I'll use an example from this CSS to explain this.
+   * *The values used in the explanation are at line 54.*
+   * So at a min-width of 1240px (so there is padding around the
+   * 1200px `--inner`) we have columns in the grid, or `--columns`.
+   * We also have a grid spacing of 4rem (`--spacing`). If you
+   * about how the grid will be displayed, the space consists of
+   * 3columns + ((2columns-1)*spacing) (one space after each column
+   * except the last one).
+   * Note: 4rem = 40px due to styles in this CSS
+   * (1200px - (4rem*(3-1)))/3  ~= 373.33px
+   * If you inspect a grid item at that resolution it is exactly the
+   * same width. Best part? ONE line of code for all resolutions, 
+   * only the variables are updated in media queries as seen below.
+   */
+  --grid-item-height: calc((var(--inner) - (var(--spacing) * (var(--columns) - 1))) / var(--columns));
 }
 
 @media screen and (min-width: 600px) {
   :root {
     --font-size--body: 1.6rem;
     --spacing: 2rem;
-    --inner: calc(100% - 30px);
-    --grid-item-height: calc((100vw - 2rem) / 2);
+    --columns: 2;
+    --subgrid-items: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 980px) {
   :root {
+    --inner: 960px;
     --font-size--body: 1.8rem;
     --spacing: 3rem;
-    --inner: 960px;
-    --grid-item-height: 30rem;
+    --columns: 3;
   }
 }
 
 @media screen and (min-width: 1240px) {
   :root {
+    --inner: 1200px;
     --font-size--body: 2.1rem;
     --spacing: 4rem;
-    --inner: 1200px;
-    --grid-item-height: calc((1200px - calc(4rem * 2)) / 3);
   }
 }
 
 
 /* Reset */
 
+/* A must on all sites */
 *, *:after, *:before { box-sizing: border-box }
+
+/* Resets REMs to 10... e.g. 2.1rem = 21px */
 html { font-size: 10px }
-html, body { margin: 0; padding: 0; overflow-x: hidden }
-a { text-decoration: none; color: hsl(0, 0%, 0%) }
+
+/* Personal preference */
+html, body { margin: 0; padding: 0; }
+a { text-decoration: none; color: var(--grey); }
 
 
-/* Main Styles */
+/* General Styles */
 
 body { 
   color: var(--grey); 
@@ -63,38 +86,28 @@ body {
 
 h1, .h1 { margin-top: 0; }
 
-h6, .h6 {
-  font-size: 1.3rem;
-  margin: 0;
-}
-
-.strong, .bold, .b { font-weight: bold }
-.em, .thin, .i { font-weight: lighter }
-.hidden { display: none }
-
-/* Lists */
+/* Lists (for nav) */
 ul { padding-left: 0; }
 .list--plain { list-style: none; }
 
-
 .inner { 
-  width: var(--inner);
   margin: 0 auto;
+  width: var(--inner);
 }
 
 header {
-  padding: 1.4rem 0 1rem;
-  background: hsl(199, 45%, 54%);
+  background: var(--blue);
+  padding: calc(var(--spacing) / 1.5) 0 calc(var(--spacing) / 2);
 }
 
 header svg { fill: #fff; }
+
 .logo__wrapper { margin-right: auto; }
 
 .inner--header {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 }
 
 
@@ -102,9 +115,9 @@ main { padding: calc(var(--spacing) * 2) 0; }
 
 
 footer {
-  background: var(--grey);
   color: #fff;
-  padding: 1rem 0;
+  background: var(--grey);
+  padding: var(--spacing) 0;
 }
 
 footer a {
@@ -121,15 +134,15 @@ footer a {
 }
 
 .grid__item__cta {
-  background: #559cbe;
   color: #fff;
-  padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
+  background: var(--blue);
   border-radius: calc(var(--font-size--body) / 2);
+  padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
 }
 
 
 /******************************************\
-|**********    THE MAIN GRID     **********|
+|**********    THE BODY GRID     **********|
 \******************************************/
 
 header { grid-area: header; }
@@ -137,55 +150,46 @@ footer { grid-area: footer; }
 main   { grid-area: main;  }
 
 body  {
+    min-height: 100vh;
     display: grid;
     grid-template-areas: "header"
                          "main"
                          "footer";
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
 }
 
 /******************************************\
-|**********    THE INNER GRID    **********|
+|**********    THE CONTENT GRID    **********|
 \******************************************/
 
 .grid__wrapper {
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: var(--spacing);
+  grid-template-columns: repeat(var(--columns), 1fr);
   margin-bottom: calc(var(--spacing) + 1rem);
 }
 
 .grid__item {
+  background: rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
   text-align: center;
-  background: rgba(0,0,0,0.1);
   padding: calc(var(--spacing) / 2);
   height: var(--grid-item-height);
 }
 
 .sub-grid__wrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
   grid-gap: calc(var(--spacing) / 2);
+  grid-template-rows: var(--subgrid-items);
+  grid-template-columns: var(--subgrid-items);
 }
 
 .sub-grid__wrapper .grid__item {
-  height: calc(calc(var(--grid-item-height) - calc(var(--spacing) / 2)) / 2);
+  justify-content: center;
+  height: calc((var(--grid-item-height) - (var(--spacing) / 2)) / 2);
 }
 
 
-@media screen and (min-width: 600px) {
-  .grid__wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 980px) {
-  .grid__wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
