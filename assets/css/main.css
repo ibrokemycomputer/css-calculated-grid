@@ -20,7 +20,7 @@
   --subgrid-items: 1fr;
   /* 
    * I'll use an example from this CSS to explain this.
-   * *The values used in the explanation are at line 54.*
+   * *The values used in the explanation are at line 57.*
    * So at a min-width of 1240px (so there is padding around the
    * 1200px `--inner`) we have columns in the grid, or `--columns`.
    * We also have a grid spacing of 4rem (`--spacing`). If you
