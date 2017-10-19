@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <title>Grid Layout | PINT Inc.</title>
-    <meta name="description" content="Advanced CSS Grid using CSS grid, flex, variables, and calc()">
-  </head>
-  <body>
-    
-    <header>
-        <div class="header inner inner--header">
-            <div class="logo__wrapper">
-                <svg width="100" class="header__logo-svg" viewBox="0 0 346.73 90.8"><title>PINT's logo</title><g><path d="M55.48,57.67H34.92L29.17,90.8H0L15.95,0H63.67C85.78,0,98.18,7.9,98.18,23.59,98.18,44.86,84.52,57.67,55.48,57.67ZM52.76,42.55c10.9,0,15.39-6,15.39-13.25,0-5.57-3.4-8.31-11.56-8.31H41.43L37.64,42.55Z"></path><path d="M96.13,90.8,112.06,0h29.18L125.29,90.8Z"></path><path d="M178.06,39l-9,51.79H141.93l16-90.8h28.86l27.7,52,9.15-52h27.11L234.8,90.8H206Z"></path><path d="M314.16,21.25,302,90.8h-29.2L285,21.25H256.19L260,0h86.72l-3.8,21.25Z"></path></g><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pint-logo"></use></svg>
-            </div>
-            <div class="mobile-toggle">
-                <svg class="mobile-toggle__icon" width="30" height="24" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect> <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect> <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect> </g> </svg>
-            </div>
-        </div>
-    </header>
 
-    <main>
-      <div class="bg">
-        <div class="inner inner--main">
-          <h1>CSS Grid System</h1>
-          <p>Example grid system using <code>display: grid</code></p>
-          <div class="grid__wrapper">
-            <div class="grid__item">Fanny pack beard succulents freegan. Put a bird on it chambray locavore, chicharrones taiyaki vice hashtag pickled.</div>
-            <div class="grid__item">Cardigan ennui cloud bread pok pok. Offal mlkshk mumblecore man braid tattooed. Pork belly umami lyft vice, bicycle rights copper mug tacos.</div>
-            <div class="grid__item">Edison bulb franzen fanny pack literally tumeric meditation 3 wolf moon try-hard.</div>
-            <div class="grid__item">Taxidermy 3 wolf moon vape, everyday carry pok pok celiac vegan helvetica. Seitan roof party adaptogen, ethical banh mi farm-to-table literally.</div>
-            <div class="grid__item">Roof party lo-fi yr messenger bag cred vexillologist. Roof party single-origin coffee vinyl truffaut direct trade sriracha affogato taxidermy.</div>
-            <div class="grid__item">Echo park plaid salvia shaman taxidermy, bicycle rights synth VHS actually typewriter venmo. </div>
-            <div class="sub-grid__wrapper">
-              <div class="grid__item">Asymmetrical beer you probably haven't heard of.</div>
-              <div class="grid__item">Dreamcatcher aesthetic polaroid cornhole food truck. </div>
-              <div class="grid__item">Artisan single-origin coffee hammock poke irony. </div>
-              <div class="grid__item">Organic tumblr, before they sold out.</div>
-            </div>
-            <div class="grid__item">Forage lumbersexual ramps vice neutra iPhone lyft direct trade trust fund. Fanny pack cliche vexillologist forage poke tumeric.</div>
-            <div class="grid__item">Occupy meggings vinyl PBR&B cardigan. Swag fixie intelligentsia kale chips. Jean shorts copper mug fixie, four dollar toast wayfarers messenger bag hammock. </div>
-            <div class="grid__item">Kinfolk selvage vape, skateboard celiac air plant ennui flexitarian. Godard taxidermy lyft wolf, cloud bread 90's mumblecore ennui mlkshk. </div>
-            <div class="grid__item">Trust fund vice yr craft beer, before they sold out venmo jean shorts echo park. Church-key seitan pug gochujang, crucifix cray normcore.</div>
-            <div class="grid__item">Brooklyn polaroid pop-up, jianbing taxidermy farm-to-table prism pitchfork kinfolk.</div>
-            <div class="grid__item">Oh. You need a little dummy text for your mockup? How quaint.</div>
-            <div class="grid__item">I bet you’re still using Bootstrap too…</div>
-          </div>
-          <p><a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="grid__item__cta">Learn More</a></p>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <title>Grid Layout | PINT Inc.</title>
+  <meta name="description" content="Advanced CSS Grid using CSS grid, flex, variables, and calc()">
+</head>
+
+<body>
+
+  <header>
+    <div class="header inner inner--header">
+      <div class="logo__wrapper">
+        <svg width="100" class="header__logo-svg" viewBox="0 0 346.73 90.8"> <title>PINT's logo</title> <g> <path d="M55.48,57.67H34.92L29.17,90.8H0L15.95,0H63.67C85.78,0,98.18,7.9,98.18,23.59,98.18,44.86,84.52,57.67,55.48,57.67ZM52.76,42.55c10.9,0,15.39-6,15.39-13.25,0-5.57-3.4-8.31-11.56-8.31H41.43L37.64,42.55Z"></path> <path d="M96.13,90.8,112.06,0h29.18L125.29,90.8Z"></path> <path d="M178.06,39l-9,51.79H141.93l16-90.8h28.86l27.7,52,9.15-52h27.11L234.8,90.8H206Z"></path> <path d="M314.16,21.25,302,90.8h-29.2L285,21.25H256.19L260,0h86.72l-3.8,21.25Z"></path> </g> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pint-logo"></use> </svg>
       </div>
-    </main>
+      <div class="mobile-toggle">
+        <svg class="mobile-toggle__icon" width="30" height="24" viewBox="0 0 30 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect class="nav-svg__inner" x="0" y="0" width="30" height="4"></rect> <rect class="nav-svg__inner" x="0" y="9" width="30" height="4"></rect> <rect class="nav-svg__inner" x="0" y="18" width="30" height="4"></rect> </g> </svg>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-        <div class="inner inner--footer">
-
-          <nav class="footer-nav__wrapper">
-            <ul class="footer-nav list--plain">
-              <li class="footer-nav__item">
-                <a href="#">About</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="footer-nav__item">
-                <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener" 
-                  class="footer-nav__item--external">Other</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="footer--secondary">
-            <a href="#">Terms &amp; Conditions</a>
-            <span class="color--primary">/</span>
-            <a href="#">Legal</a><br class="mobile-only">
-            <!-- The following provides a dynamically generated date 
-                with a static fallback -->
-            <span class="copyright">&copy; 
-              <script>document.write(new Date().getFullYear());</script>
-              <noscript>2017</noscript>
-              PINT Inc.</span>
+  <main>
+    <div class="bg">
+      <div class="inner inner--main">
+        <h1>CSS Grid System</h1>
+        <p>Example grid system using
+          <code>display: grid</code>
+        </p>
+        <div class="grid__wrapper">
+          <div class="grid__item">Fanny pack beard succulents freegan. Put a bird on it chambray locavore, chicharrones taiyaki vice hashtag pickled.</div>
+          <div class="grid__item">Cardigan ennui cloud bread pok pok. Offal mlkshk mumblecore man braid tattooed. Pork belly umami lyft vice, bicycle rights copper mug tacos.</div>
+          <div class="grid__item">Edison bulb franzen fanny pack literally tumeric meditation 3 wolf moon try-hard.</div>
+          <div class="grid__item">Taxidermy 3 wolf moon vape, everyday carry pok pok celiac vegan helvetica. Seitan roof party adaptogen, ethical banh mi farm-to-table literally.</div>
+          <div class="grid__item">Roof party lo-fi yr messenger bag cred vexillologist. Roof party single-origin coffee vinyl truffaut direct trade sriracha affogato taxidermy.</div>
+          <div class="grid__item">Echo park plaid salvia shaman taxidermy, bicycle rights synth VHS actually typewriter venmo. </div>
+          <div class="sub-grid__wrapper">
+            <div class="grid__item">Asymmetrical beer you probably haven't heard of.</div>
+            <div class="grid__item">Dreamcatcher aesthetic polaroid cornhole food truck. </div>
+            <div class="grid__item">Artisan single-origin coffee hammock poke irony. </div>
+            <div class="grid__item">Organic tumblr, before they sold out.</div>
           </div>
+          <div class="grid__item">Forage lumbersexual ramps vice neutra iPhone lyft direct trade trust fund. Fanny pack cliche vexillologist forage poke tumeric.</div>
+          <div class="grid__item">Occupy meggings vinyl PBR&B cardigan. Swag fixie intelligentsia kale chips. Jean shorts copper mug fixie, four dollar toast wayfarers messenger bag hammock. </div>
+          <div class="grid__item">Kinfolk selvage vape, skateboard celiac air plant ennui flexitarian. Godard taxidermy lyft wolf, cloud bread 90's mumblecore ennui mlkshk. </div>
+          <div class="grid__item">Trust fund vice yr craft beer, before they sold out venmo jean shorts echo park. Church-key seitan pug gochujang, crucifix cray normcore.</div>
+          <div class="grid__item">Brooklyn polaroid pop-up, jianbing taxidermy farm-to-table prism pitchfork kinfolk.</div>
+          <div class="grid__item">Oh. You need a little dummy text for your mockup? How quaint.</div>
+          <div class="grid__item">I bet you’re still using Bootstrap too…</div>
         </div>
-    </footer>
+        <p>
+          <a href="//www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">Learn More</a>
+        </p>
+      </div>
+    </div>
+  </main>
 
-  </body>
+  <footer>
+    <div class="inner inner--footer">
+
+      <nav class="footer-nav__wrapper">
+        <ul class="footer-nav list--plain">
+          <li class="footer-nav__item"> <a href="#">About</a> </li>
+          <li class="footer-nav__item"> <a href="#">Contact</a> </li>
+          <li class="footer-nav__item"> <a href="//bfy.tw/E4Bg" target="_blank" rel="noopener" class="footer-nav__item--external">Other</a> </li>
+        </ul>
+      </nav>
+
+      <div class="footer--secondary">
+        <a href="#">Terms &amp; Conditions</a>
+        <span class="tablet-up">/</span>
+        <a href="#">Legal</a>
+        <br class="mobile-only">
+        <!-- The following provides a dynamically generated date 
+              with a static fallback -->
+        <span class="copyright">&copy;
+          <!-- Folllowing line checks if JS is enabled-->
+          <script> document.write(new Date().getFullYear()); </script> <noscript>2017</noscript>
+          PINT Inc.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
